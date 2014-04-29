@@ -60,7 +60,7 @@ function drush_extensions_info() {
       $row['package'] = !empty($info['package']) ? $info['package'] : dt('(No package)');
       if (strpos($file->filename, 'contrib') !== FALSE) {
         $row['path'] = 'http://drupal.org/project/' . $info['project'];
-      } 
+      }
       else {
         // @todo Find out what to do with custom paths.
         $row['path'] = dt('(custom)');
