@@ -2,7 +2,6 @@
 
 /**
  * @file
- *
  * Drupal extensions scanned commands.
  */
 
@@ -11,12 +10,11 @@
  */
 function extensions_info_drush_command() {
   $items = array();
-
   $options = array();
 
   $items['extensions_info'] = array(
     'description' => dt('Return information about Drupal extensions (modules, themes).'),
-    'aliases' => array('mi'),    
+    'aliases' => array('mi'),
     'options' => $options,
     'outputformat' => array(
       'default' => 'table',
@@ -26,7 +24,7 @@ function extensions_info_drush_command() {
         'description' => 'Description',
         'package' => 'Package',
         'path' => 'Path',
-       ),
+      ),
       'output-data-type' => 'format-table',
     ),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUSH,
@@ -62,7 +60,8 @@ function drush_extensions_info() {
       $row['package'] = !empty($info['package']) ? $info['package'] : dt('(No package)');
       if (strpos($file->filename, 'contrib') !== FALSE) {
         $row['path'] = 'http://drupal.org/project/' . $info['project'];
-      } else {
+      } 
+      else {
         // @todo Find out what to do with custom paths.
         $row['path'] = dt('(custom)');
       }
