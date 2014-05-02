@@ -55,6 +55,8 @@ function drush_extensions_info() {
     $info = drush_drupal_parse_info_file($file->filename);
 
     if (isset($info['project']) && $info['project'] !== 'drupal') {
+      // @info['project'] is the same for nested modules. Use .info file name instead.
+      $project_name = str_replace('.info', '', basename($file->filename));            
       $row['name'] = $info['name'];
       $row['description'] = !empty($info['description']) ? $info['description'] : dt('(No description)');
       $row['package'] = !empty($info['package']) ? $info['package'] : dt('(No package)');
@@ -65,7 +67,7 @@ function drush_extensions_info() {
         // @todo Find out what to do with custom paths.
         $row['path'] = dt('(custom)');
       }
-      $result[$info['project']] = $row;
+      $result[$project_name] = $row;
       unset($row);
     }
   }
