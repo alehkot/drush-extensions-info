@@ -1,4 +1,4 @@
-drush_extensions_info
+Drush Extensions Info
 =====================
 
 A Drush plugin to recursively scan sub-directories for .info files and output the information from these files in variety of formats: Table, CSV, Yaml, XML, etc.
