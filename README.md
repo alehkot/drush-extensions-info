@@ -6,4 +6,4 @@ Useful to quickly determine which modules were used in a project.
 drush pm-list command requires installed and configured Drupal website, which might not be an option in some cases.
 This plugin doesn't have this limitation.
 
-Installation procedure is the same as for other Drush plugins and commands: just clone the repository and copy the contents to ~/.drush folder (on Windows, C:\Users\[Username]\.drush).
+Installation procedure is the same as for other Drush plugins and commands: just clone the repository and copy the contents to ~/.drush folder (on Windows, C:\Users\\[Username]\\.drush).
